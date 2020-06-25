@@ -1,8 +1,8 @@
 {
-  "name": "phaser3-custom-build",
-  "version": "1.0.2",
+  "name": "@patomation/phaser3-custom-build",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/phaser-full-sans-physics.min.js",
   "scripts": {
     "build": "webpack --display-modules",
     "buildlog": "webpack --json --profile > webpack.build-log.json",
@@ -15,8 +15,10 @@
     "buildfull": "webpack --config webpack.config-full.js --display-modules",
     "buildfulllog": "webpack --config webpack.config-full.js --json --profile > webpack.build-full-log.json",
     "buildcore": "webpack --config webpack.config-core.js --display-modules",
-    "buildcorelog": "webpack --config webpack.config-core.js --json --profile > webpack.build-core-log.json"
+    "buildcorelog": "webpack --config webpack.config-core.js --json --profile > webpack.build-core-log.json",
+    "buildfullsansphysics": "webpack --config webpack.config-full-sans-physics.js"
   },
+  "prepublish": "npm run buildfullsansphysics",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/photonstorm/phaser3-custom-build.git"
